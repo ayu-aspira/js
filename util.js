@@ -103,6 +103,7 @@ var createActionHistory = function (initActionId) {
         extraAction: extraAction,
       });
       currentStatus.undoable = true;
+      redoAction.length = 0; // Clear when a new action is executed    
       refreshUndoRedo(extraAction);
     },
   };
